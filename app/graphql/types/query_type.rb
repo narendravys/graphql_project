@@ -2,6 +2,16 @@
 
 module Types
   class QueryType < Types::BaseObject
+
+    # Search using elastic search
+    field :search_books, [Types::BookType], null: false do
+      argument :query, String, required: true
+    end
+
+    def search_books(query:)
+      Book.search(query).records
+    end
+
      # Fetch all books
     field :books, [Types::BookType], null: false
 

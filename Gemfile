@@ -53,3 +53,7 @@ gem "pg", "~> 1.5"
 gem "faker", "~> 3.5"
 
 gem "bullet", "~> 8.0"
+
+gem "elasticsearch-model", "~> 8.0"
+
+gem "elasticsearch-rails", "~> 8.0"
